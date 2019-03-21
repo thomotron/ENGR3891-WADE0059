@@ -7,7 +7,7 @@ if [ -e exercise1.txt ]; then rm -f exercise1.txt; fi
 # 1. Run script
 bash $1
 # 2. Get contents of tar ball, and sort them, and exclude time stamps
-tar ztvf unit1exercise1.tgz | cut -c1-30,48- | LC_COLLATE=C sort > exercise1.txt
+tar ztvf unit1-solution1.tgz | cut -c1-30,48- | LC_COLLATE=C sort > exercise1.txt
 # 3. Compare output with template.
 differentlines=`diff exercise1.txt unit1-exercise-1-template.txt | grep "^>" | wc -l` # count each differing line only once
 if [ $differentlines -gt 20 ]; then differentlines=20; fi
@@ -17,10 +17,10 @@ outputpoints=$((60 - deduct))
 # Size points only apply if you can get 100% on the correctness.
 sizepoints=0
 size=`cat $1 | wc -c`
-if [ $size -le 2553 ]; then sizepoints=5; fi
-if [ $size -le 1761 ]; then sizepoints=15; fi
-if [ $size -le 969 ]; then sizepoints=25; fi
-if [ $size -le 823 ]; then sizepoints=40; fi
+if [ $size -le 2554 ]; then sizepoints=5; fi
+if [ $size -le 1762 ]; then sizepoints=15; fi
+if [ $size -le 970 ]; then sizepoints=25; fi
+if [ $size -le 824 ]; then sizepoints=40; fi
 if [ $differentlines -gt 0 ]; then sizepoints=0; fi
 
 echo "Correctness points: $outputpoints"
