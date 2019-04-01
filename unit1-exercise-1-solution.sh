@@ -1,28 +1,25 @@
-M='mkdir -m'
-D=unit1exercise1
-$M 775 $D
-cd $D
-$M 536 angeraucher
-$M 266 aussetzte
-$M 771 angetrautest
-$M 651 enschmeckse
-$M 154 zerfahrer
-$M 664 angekraust
-$M 344 angehunds
-$M 006 aufpflumheit
-$M 616 aussetzte/gehundte
-$M 305 angehunds/angesitzt
-$M 700 aufpflumheit/ausgekaesen
-$M 537 angekraust/geschmecken
-$M 502 angekraust/enkatzetete
-$M 363 angehunds/angesitzt/auspflums
-$M 644 angehunds/angesitzt/aussetzt
-$M 025 angehunds/angesitzt/angeschmecken
-$M 255 angehunds/angesitzt/aufgerennen
-$M 416 angehunds/angesitzt/getrauen
-$M 270 aufpflumheit/ausgekaesen/eingehen
-$M 145 angehunds/angesitzt/aufsetztete
-S=student
-chown -R $S:$S ./
+mkdir -m 775 unit1exercise1
+cd unit1exercise1
+mkdir -m 536 angeraucher
+mkdir -m 266 aussetzte
+mkdir -m 771 angetrautest
+mkdir -m 651 enschmeckse
+mkdir -m 154 zerfahrer
+mkdir -m 664 angekraust
+mkdir -m 344 angehunds
+mkdir -m 006 aufpflumheit
+mkdir -m 616 aussetzte/gehundte
+mkdir -m 305 angehunds/angesitzt
+mkdir -m 700 aufpflumheit/ausgekaesen
+mkdir -m 537 angekraust/geschmecken
+mkdir -m 502 angekraust/enkatzetete
+mkdir -m 363 angehunds/angesitzt/auspflums
+mkdir -m 644 angehunds/angesitzt/aussetzt
+mkdir -m 025 angehunds/angesitzt/angeschmecken
+mkdir -m 255 angehunds/angesitzt/aufgerennen
+mkdir -m 416 angehunds/angesitzt/getrauen
+mkdir -m 270 aufpflumheit/ausgekaesen/eingehen
+mkdir -m 145 angehunds/angesitzt/aufsetztete
+chown -R student:student ./
 cd ..
-tar caf unit1-solution1.tgz $D
+tar caf unit1-solution1.tgz unit1exercise1
