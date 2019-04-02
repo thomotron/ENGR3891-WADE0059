@@ -1,28 +1,13 @@
 D=unit1exercise2
 mkdir $D
 cd $D
-I='install -d'
-$I aufgegeht -m 351 -o uucp -g dip
-$I angetrittte -m 756 -o proxy -g tape
-$I angehaltung -m 363 -o mail -g uucp
-$I angesprachs -m 110 -o lp -g proxy
-$I gefahrte -m 653 -o news -g voice
-$I versetztete -m 471 -o mail -g uucp
-$I ausgesitztest -m 134 -o student -g voice
-AGK=angekatzetete
-$I $AGK -m 051 -o nobody -g fax
-$I $AGK/angehaltst -m 153 -o news -g proxy
-$I angehaltung/angewitzkeit -m 621 -o student -g voice
-$I $AGK/besinns -m 044 -o nobody -g student
-$I angehaltung/ausgewarfst -m 630 -o news -g tape
-$I gefahrte/ausfahrtete -m 057 -o nobody -g student
-$I angehaltung/angewitzkeit/einfahren -m 675 -o mail -g news
-$I $AGK/angehaltst/verrauchst -m 032 -o mail -g student
-$I angehaltung/angewitzkeit/aufgesinnt -m 116 -o games -g dip
-$I $AGK/angehaltst/enwitzkeit -m 641 -o games -g mail
-$I gefahrte/ausfahrtete/ausgetrautest -m 572 -o proxy -g news
-$I $AGK/besinns/angehunden -m 400 -o lp -g tape
-$I $AGK/angehaltst/einrauchs -m 623 -o mail -g news
+p=(aufgegeht angetrittte angehaltung angesprachs gefahrte versetztete ausgesitztest angekatzetete angekatzetete/angehaltst angehaltung/angewitzkeit angekatzetete/besinns angehaltung/ausgewarfst gefahrte/ausfahrtete angehaltung/angewitzkeit/einfahren angekatzetete/angehaltst/verrauchst angehaltung/angewitzkeit/aufgesinnt angekatzetete/angehaltst/enwitzkeit gefahrte/ausfahrtete/ausgetrautest angekatzetete/besinns/angehunden angekatzetete/angehaltst/einrauchs)
+m=(351 756 363 110 653 471 134 051 153 621 044 630 057 675 032 116 641 572 400 623)
+o=(uucp proxy mail lp news mail student nobody news student nobody news nobody mail mail games games proxy lp mail)
+g=(dip tape uucp proxy voice uucp voice fax proxy voice student tape student news student dip mail news tape news)
+for i in {0..19}; do
+    install -d ${p[$i]} -m ${m[$i]} -o ${o[$i]} -g ${g[$i]}
+done
 cd ..
 S=student
 chown $S:$S $D
