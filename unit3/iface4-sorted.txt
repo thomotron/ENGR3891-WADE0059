@@ -1,0 +1,23 @@
+
+
+
+
+
+
+
+	address 38.3.241.47/16
+	hwaddress 48:78:F9:FD:C1:8B
+	hwaddress 70:8F:EF:52:D6:8C
+	hwaddress 89:8A:F2:EA:94:A5
+	hwaddress D6:D9:D7:A1:C8:53
+iface 38.3.241.47 inet static inherits ruins2
+iface castle3 inet
+iface eth0 inet inherits castle3
+iface eth2 inet inherits ruins1
+iface moths0 inet
+iface ruins1 inet
+iface ruins2 inet
+	mtu 1173
+	mtu 1561
+	mtu 4956
+	mtu 936

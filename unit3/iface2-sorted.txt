@@ -1,0 +1,19 @@
+
+
+
+
+
+
+	address 28.168.79.156/10
+	hwaddress 17:EB:AB:29:9E:99
+	hwaddress 2B:B2:80:8E:6D:4B
+	hwaddress 59:B7:2A:02:92:3F
+iface 28.168.79.156 inet static
+iface ftdi1 inet
+iface moths2 inet
+iface ruins0 inet
+iface ruins1 inet
+iface wlan0 inet inherits ruins1
+	mtu 2889
+	mtu 5069
+	mtu 5170

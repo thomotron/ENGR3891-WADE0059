@@ -1,0 +1,34 @@
+
+
+
+
+
+
+
+
+
+
+
+	address 122.202.132.207/18
+	address 42.14.4.161/10
+	address 71.21.253.116/13
+	address 80.123.242.188/29
+	hwaddress 5E:0F:A3:E3:FE:19
+	hwaddress 83:C2:CA:91:E8:CF
+	hwaddress D5:D3:A2:21:B7:98
+	hwaddress D6:37:11:B6:9A:5F
+iface 122.202.132.207 inet static
+iface 42.14.4.161 inet static inherits moths3
+iface 71.21.253.116 inet static
+iface 80.123.242.188 inet static inherits castle1
+iface castle0 inet
+iface castle1 inet
+iface eth6 inet
+iface jam4 inet
+iface moths3 inet
+iface wealth2 inet
+iface wlan0 inet
+	mtu 1424
+	mtu 2287
+	mtu 5888
+	mtu 7024
