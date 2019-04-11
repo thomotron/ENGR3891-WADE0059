@@ -1,0 +1,3 @@
+iface castle0 manual
+	mtu 1424
+	hwaddress D6:37:11:B6:9A:5F
