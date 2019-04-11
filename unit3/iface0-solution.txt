@@ -1,3 +1,33 @@
-iface castle0 manual
+iface castle0 inet
 	mtu 1424
 	hwaddress D6:37:11:B6:9A:5F
+
+iface castle1 inet
+	mtu 5888
+	hwaddress D5:D3:A2:21:B7:98
+
+iface wealth2 inet
+	mtu 2287
+	hwaddress 83:C2:CA:91:E8:CF
+
+iface moths3 inet
+	mtu 7024
+	hwaddress 5E:0F:A3:E3:FE:19
+
+iface wlan0 inet
+
+iface 71.21.253.116 inet static
+	address 71.21.253.116/13
+
+iface 42.14.4.161 inet static inherits moths3
+	address 42.14.4.161/10
+
+iface 80.123.242.188 inet static inherits castle1
+	address 80.123.242.188/29
+
+iface jam4 inet
+
+iface 122.202.132.207 inet static
+	address 122.202.132.207/18
+
+iface eth6 inet
