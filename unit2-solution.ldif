@@ -1,4 +1,4 @@
-manager: cn=Frances Roberts,ou=Sub-divisions# Organisations
+manager: cn=Frances Roberts,ou=Sub-divisions
 dn: dc=Lanthanide Productions,dc=nodomain
 objectClass: dcObject
 objectClass: organization
@@ -29,7 +29,6 @@ objectClass: organization
 dc: Unimaginable University
 o: Unimaginable University.
 
-# Departments
 dn: ou=Sub-divisions,dc=Neo-Imperial Exports,dc=nodomain
 objectClass: organizationalUnit
 ou: Sub-divisions
@@ -86,7 +85,6 @@ dn: ou=Statistical misinterpretation,ou=Finance,dc=Monopolistic Trading Company,
 objectClass: organizationalUnit
 ou: Statistical misinterpretation
 
-# People
 dn: cn=Magnus Taylor,ou=Environmental protection,ou=Research,ou=Consolidation,dc=Lanthanide Productions,dc=nodomain
 objectClass: organizationalPerson
 objectClass: inetOrgPerson
