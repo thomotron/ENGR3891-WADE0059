@@ -1,140 +1,95 @@
 # Organisations
-dn: cn=Neo-Imperial Exports,dc=nodomain
+dn: dc=Lanthanide Productions,dc=nodomain
+objectClass: dcObject
 objectClass: organization
-organizationName: Neo-Imperial Exports
+dc: Lanthanide Productions
+o: Lanthanide Productions.
 
-dn: cn=Lanthanide Productions,dc=nodomain
+dn: dc=Monopolistic Trading Company,dc=nodomain
+objectClass: dcObject
 objectClass: organization
-organizationName: Lanthanide Productions
+dc: Monopolistic Trading Company
+o: Monopolistic Trading Company.
 
-dn: cn=Unimaginable University,dc=nodomain
+dn: dc=Monopolistic Used Vehicles,dc=nodomain
+objectClass: dcObject
 objectClass: organization
-organizationName: Unimaginable University
+dc: Monopolistic Used Vehicles
+o: Monopolistic Used Vehicles.
 
-dn: cn=Monopolistic Used Vehicles,dc=nodomain
+dn: dc=Neo-Imperial Exports,dc=nodomain
+objectClass: dcObject
 objectClass: organization
-organizationName: Monopolistic Used Vehicles
+dc: Neo-Imperial Exports
+o: Neo-Imperial Exports.
 
-dn: cn=Monopolistic Trading Company,dc=nodomain
+dn: dc=Unimaginable University,dc=nodomain
+objectClass: dcObject
 objectClass: organization
-organizationName: Monopolistic Trading Company
+dc: Unimaginable University
+o: Unimaginable University.
 
-dn: cn=Neo-Imperial Exports,ou=Sub-divisions,dc=nodomain
+# Departments
+dn: ou=Sub-divisions,dc=Neo-Imperial Exports,dc=nodomain
 objectClass: organizationalUnit
 ou: Sub-divisions
 
-dn: cn=Neo-Imperial Exports,ou=Sub-divisions,ou=Pest control,dc=nodomain
+dn: ou=Pest control,ou=Sub-divisions,dc=Neo-Imperial Exports,dc=nodomain
 objectClass: organizationalUnit
 ou: Pest control
 
-dn: cn=Lanthanide Productions,ou=Consolidation,dc=nodomain
+dn: ou=Consolidation,dc=Lanthanide Productions,dc=nodomain
 objectClass: organizationalUnit
 ou: Consolidation
 
-dn: cn=Lanthanide Productions,ou=Consolidation,ou=Research,dc=nodomain
+dn: ou=Research,ou=Consolidation,dc=Lanthanide Productions,dc=nodomain
 objectClass: organizationalUnit
 ou: Research
 
-dn: cn=Lanthanide Productions,ou=Consolidation,ou=Research,ou=Human resources,dc=nodomain
+dn: ou=Human resources,ou=Research,ou=Consolidation,dc=Lanthanide Productions,dc=nodomain
 objectClass: organizationalUnit
 ou: Human resources
 
-dn: cn=Lanthanide Productions,ou=Consolidation,ou=Research,ou=Environmental protection,dc=nodomain
+dn: ou=Environmental protection,ou=Research,ou=Consolidation,dc=Lanthanide Productions,dc=nodomain
 objectClass: organizationalUnit
 ou: Environmental protection
 
-dn: cn=Unimaginable University,ou=Misappropriation,dc=nodomain
+dn: ou=Misappropriation,dc=Unimaginable University,dc=nodomain
 objectClass: organizationalUnit
 ou: Misappropriation
 
-dn: cn=Unimaginable University,ou=Misappropriation,ou=Manufacture,dc=nodomain
+dn: ou=Manufacture,ou=Misappropriation,dc=Unimaginable University,dc=nodomain
 objectClass: organizationalUnit
 ou: Manufacture
 
-dn: cn=Unimaginable University,ou=Misappropriation,ou=Embezzelment,dc=nodomain
+dn: ou=Embezzelment,ou=Misappropriation,dc=Unimaginable University,dc=nodomain
 objectClass: organizationalUnit
 ou: Embezzelment
 
-dn: cn=Monopolistic Used Vehicles,ou=market punctuation,dc=nodomain
+dn: ou=market punctuation,dc=Monopolistic Used Vehicles,dc=nodomain
 objectClass: organizationalUnit
 ou: market punctuation
 
-dn: cn=Monopolistic Used Vehicles,ou=market punctuation,ou=Environmental protection,dc=nodomain
+dn: ou=Environmental protection,ou=market punctuation,dc=Monopolistic Used Vehicles,dc=nodomain
 objectClass: organizationalUnit
 ou: Environmental protection
 
-dn: cn=Monopolistic Used Vehicles,ou=market punctuation,ou=Environmental protection,ou=Manufacture,dc=nodomain
+dn: ou=Manufacture,ou=Environmental protection,ou=market punctuation,dc=Monopolistic Used Vehicles,dc=nodomain
 objectClass: organizationalUnit
 ou: Manufacture
 
-dn: cn=Monopolistic Trading Company,ou=Finance,dc=nodomain
+dn: ou=Finance,dc=Monopolistic Trading Company,dc=nodomain
 objectClass: organizationalUnit
 ou: Finance
 
-dn: cn=Monopolistic Trading Company,ou=Finance,ou=Statistical misinterpretation,dc=nodomain
+dn: ou=Statistical misinterpretation,ou=Finance,dc=Monopolistic Trading Company,dc=nodomain
 objectClass: organizationalUnit
 ou: Statistical misinterpretation
 
-dn: cn=Magnus Taylor,cn=Lanthanide Productions,ou=Environmental protection,dc=nodomain
+# People
+dn: cn=Magnus Taylor,ou=Environmental protection,ou=Research,ou=Consolidation,dc=Lanthanide Productions,dc=nodomain
 objectClass: organizationalPerson
+objectClass: inetOrgPerson
 cn: Magnus Taylor
-gn: Magnus
 sn: Taylor
 mail: mtaylor@monopilistictradingcompany.com.nz
-telephoneNumber: 
-
-dn: cn=,cn=,ou=,dc=nodomain
-objectClass: organizationalPerson
-cn:
-gn:
-sn:
-mail:
-telephoneNumber:
-
-dn: cn=,cn=,ou=,dc=nodomain
-objectClass: organizationalPerson
-cn:
-gn:
-sn:
-mail:
-telephoneNumber:
-
-dn: cn=,cn=,ou=,dc=nodomain
-objectClass: organizationalPerson
-cn:
-gn:
-sn:
-mail:
-telephoneNumber:
-
-dn: cn=,cn=,ou=,dc=nodomain
-objectClass: organizationalPerson
-cn:
-gn:
-sn:
-mail:
-telephoneNumber:
-
-dn: cn=,cn=,ou=,dc=nodomain
-objectClass: organizationalPerson
-cn:
-gn:
-sn:
-mail:
-telephoneNumber:
-
-dn: cn=,cn=,ou=,dc=nodomain
-objectClass: organizationalPerson
-cn:
-gn:
-sn:
-mail:
-telephoneNumber:
-
-dn: cn=,cn=,ou=,dc=nodomain
-objectClass: organizationalPerson
-cn:
-gn:
-sn:
-mail:
-telephoneNumber:
