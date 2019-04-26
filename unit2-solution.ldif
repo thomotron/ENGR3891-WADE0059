@@ -1,4 +1,4 @@
-# Organisations
+manager: cn=Frances Roberts,ou=Sub-divisions# Organisations
 dn: dc=Lanthanide Productions,dc=nodomain
 objectClass: dcObject
 objectClass: organization
@@ -93,3 +93,471 @@ objectClass: inetOrgPerson
 cn: Magnus Taylor
 sn: Taylor
 mail: mtaylor@monopilistictradingcompany.com.nz
+
+dn: cn=Mario Lewis,ou=Human resources,ou=Research,ou=Consolidation,dc=Lanthanide Productions,dc=nodomain
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Mario Lewis
+sn: Lewis
+mail: mario5l5@lanthanideproductions.com.nz
+telephoneNumber: +6589895177
+manager: cn=Magnus Taylor,ou=Environmental protection,ou=Research,ou=Consolidation
+
+dn: cn=Magnus Lewis,ou=market punctuation,dc=Monopolistic Used Vehicles,dc=nodomain
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Magnus Lewis
+sn: Lewis
+mail: ml2@monopolistictradingcompany.com.nz
+
+dn: cn=Micah Wood,ou=market punctuation,dc=Monopolistic Used Vehicles,dc=nodomain
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Micah Wood
+sn: Wood
+mail: micah5w4@lanthanideproductions.com.nz
+telephoneNumber: +6589895625
+telephoneNumber: +6589895482
+telephoneNumber: +6589895814
+telephoneNumber: +6589895077
+manager: cn=Magnus Lewis,ou=market punctuation
+
+dn: cn=Francesca Cooper,ou=Manufacture,ou=Misappropriation,dc=Unimaginable University,dc=nodomain
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Francesca Cooper
+sn: Cooper
+mail: fc4@unimaginableuniversity.com.ki
+
+dn: cn=Frances Williams,ou=Human resources,ou=Research,ou=Consolidation,dc=Lanthanide Productions,dc=nodomain
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Frances Williams
+sn: Williams
+mail: fwilliams@lanthanideproductions.com.nz
+manager: cn=Magnus Taylor,ou=Environmental protection,ou=Research,ou=Consolidation
+
+dn: cn=Fran Thomas,ou=Statistical misinterpretation,ou=Finance,dc=Monopolistic Trading Company,dc=nodomain
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Fran Thomas
+sn: Thomas
+mail: ft6@neoimperialexports.com.aq
+telephoneNumber: +672101935
+
+dn: cn=Mark Martin,ou=Embezzelment,ou=Misappropriation,dc=Unimaginable University,dc=nodomain
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Mark Martin
+sn: Martin
+mail: mm7@lanthanideproductions.com.nz
+telephoneNumber: +6589895749
+telephoneNumber: +6589895275
+telephoneNumber: +6589895569
+manager: cn=Francesca Cooper,ou=Manufacture,ou=Misappropriation
+
+dn: cn=Fran Evans,ou=Embezzelment,ou=Misappropriation,dc=Unimaginable University,dc=nodomain
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Fran Evans
+sn: Evans
+mail: fran4e5@lanthanideproductions.com.nz
+telephoneNumber: +6589895884
+telephoneNumber: +6589895991
+telephoneNumber: +6589895579
+manager: cn=Mark Martin,ou=Embezzelment,ou=Misappropriation
+
+dn: cn=Frances Thompson,ou=Research,ou=Consolidation,dc=Lanthanide Productions,dc=nodomain
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Frances Thompson
+sn: Thompson
+mail: ft9@monopolistictradingcompany.com.nz
+manager: cn=Mario Lewis,ou=Human resources,ou=Research,ou=Consolidation
+
+dn: cn=Frances Roberts,ou=Sub-divisions,dc=Neo-Imperial Exports,dc=nodomain
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Frances Roberts
+sn: Roberts
+mail: frances7r7@monopolistictradingcompany.com.nz
+telephoneNumber: +6505679264
+telephoneNumber: +6505679521
+telephoneNumber: +6505679171
+
+dn: cn=Micah Evans,ou=Sub-divisions,dc=Neo-Imperial Exports,dc=nodomain
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Micah Evans
+sn: Evans
+mail: mevans@lanthanideproductions.com.nz
+telephoneNumber: +6589895381
+manager: cn=Frances Roberts,ou=Sub-divisions
+
+dn: cn=Micah Thompson,ou=Environmental protection,ou=market punctuation,dc=Monopolistic Used Vehicles,dc=nodomain
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Micah Thompson
+sn: Thompson
+mail: mthompson@monopolistictradingcompany.com.nz
+telephoneNumber: +6505679990
+telephoneNumber: +6505679422
+telephoneNumber: +6505679305
+telephoneNumber: +6505679570
+manager: cn=Micah Wood,ou=market punctuation
+
+dn: cn=Murray Robinson,ou=Embezzelment,ou=Misappropriation,dc=Unimaginable University,dc=nodomain
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Murray Robinson
+sn: Robinson
+mail: murray.robinson@monopolisticusedvehicles.com.aq
+telephoneNumber: +672112596
+manager: cn=Fran Evans,ou=Embezzelment,ou=Misappropriation
+
+dn: cn=Martin Clarke,ou=Statistical misinterpretation,ou=Finance,dc=Monopolistic Trading Company,dc=nodomain
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Martin Clarke
+sn: Clarke
+mail: mc14@monopolistictradingcompany.com.nz
+telephoneNumber: +6505679010
+manager: cn=Fran Thomas,ou=Statistical misinterpretation,ou=Finance
+
+dn: cn=Mario Watson,ou=market punctuation,dc=Monopolistic Used Vehicles,dc=nodomain
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Mario Watson
+sn: Watson
+mail: mario.watson@monopolistictradingcompany.com.nz
+telephoneNumber: +6505679779
+telephoneNumber: +6505679273
+telephoneNumber: +6505679750
+manager: cn=Micah Wood,ou=market punctuation
+
+dn: cn=Martin James,ou=Research,ou=Consolidation,dc=Lanthanide Productions,dc=nodomain
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Martin James
+sn: James
+mail: martin6j5@monopolistictradingcompany.com.nz
+telephoneNumber: +6505679736
+manager: cn=Magnus Taylor,ou=Environmental protection,ou=Research,ou=Consolidation
+
+dn: cn=Magnus Wood,ou=Pest control,ou=Sub-divisions,dc=Neo-Imperial Exports,dc=nodomain
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Magnus Wood
+sn: Wood
+mail: mwood@monopolisticusedvehicles.com.aq
+telephoneNumber: +672112282
+telephoneNumber: +672112962
+telephoneNumber: +672112613
+telephoneNumber: +672112968
+manager: cn=Frances Roberts,ou=Sub-divisions
+
+dn: cn=Murray Walker,ou=Embezzelment,ou=Misappropriation,dc=Unimaginable University,dc=nodomain
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Murray Walker
+sn: Walker
+mail: mw18@monopolistictradingcompany.com.nz
+telephoneNumber: +6505679616
+manager: cn=Murray Robinson,ou=Embezzelment,ou=Misappropriation
+
+dn: cn=Micah Clarke,ou=Consolidation,dc=Lanthanide Productions,dc=nodomain
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Micah Clarke
+sn: Clarke
+mail: micah.clarke@unimaginableuniversity.com.ki
+manager: cn=Frances Thompson,ou=Research,ou=Consolidation
+
+dn: cn=Magnus Harris,ou=Consolidation,dc=Lanthanide Productions,dc=nodomain
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Magnus Harris
+sn: Harris
+mail: magnus6h6@unimaginableuniversity.com.ki
+telephoneNumber: +68685311493
+telephoneNumber: +68685311670
+manager: cn=Frances Thompson,ou=Research,ou=Consolidation
+
+dn: cn=Micah Thomas,ou=Statistical misinterpretation,ou=Finance,dc=Monopolistic Trading Company,dc=nodomain
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Micah Thomas
+sn: Thomas
+mail: micah5t6@unimaginableuniversity.com.ki
+telephoneNumber: +68685311227
+telephoneNumber: +68685311335
+telephoneNumber: +68685311885
+telephoneNumber: +68685311195
+manager: cn=Martin Clarke,ou=Statistical misinterpretation,ou=Finance
+
+dn: cn=Fiona Lee,ou=Misappropriation,dc=Unimaginable University,dc=nodomain
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Fiona Lee
+sn: Lee
+mail: fl22@unimaginableuniversity.com.ki
+telephoneNumber: +68685311000
+telephoneNumber: +68685311737
+telephoneNumber: +68685311986
+telephoneNumber: +68685311852
+manager: cn=Fran Evans,ou=Embezzelment,ou=Misappropriation
+
+dn: cn=Freda King,ou=Human resources,ou=Research,ou=Consolidation,dc=Lanthanide Productions,dc=nodomain
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Freda King
+sn: King
+mail: fk23@unimaginableuniversity.com.ki
+telephoneNumber: +68685311652
+telephoneNumber: +68685311864
+telephoneNumber: +68685311177
+manager: cn=Frances Thompson,ou=Research,ou=Consolidation
+
+dn: cn=Francesca Brown,ou=Pest control,ou=Sub-divisions,dc=Neo-Imperial Exports,dc=nodomain
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Francesca Brown
+sn: Brown
+mail: francesca.brown@unimaginableuniversity.com.ki
+telephoneNumber: +68685311230
+telephoneNumber: +68685311021
+manager: cn=Micah Evans,ou=Sub-divisions
+
+dn: cn=Fifi Wright,ou=Finance,dc=Monopolistic Trading Company,dc=nodomain
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Fifi Wright
+sn: Wright
+mail: fw25@neoimperialexports.com.aq
+manager: cn=Micah Thomas,ou=Statistical misinterpretation,ou=Finance
+
+dn: cn=Martin Lee,ou=Environmental protection,ou=market punctuation,dc=Monopolistic Used Vehicles,dc=nodomain
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Martin Lee
+sn: Lee
+mail: ml26@monopolisticusedvehicles.com.aq
+manager: cn=Mario Watson,ou=market punctuation
+
+dn: cn=Flora Wood,ou=market punctuation,dc=Monopolistic Used Vehicles,dc=nodomain
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Flora Wood
+sn: Wood
+mail: fw27@lanthanideproductions.com.nz
+telephoneNumber: +6589895724
+manager: cn=Micah Wood,ou=market punctuation
+
+dn: cn=Morgan Jones,ou=Consolidation,dc=Lanthanide Productions,dc=nodomain
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Morgan Jones
+sn: Jones
+mail: morgan.jones@unimaginableuniversity.com.ki
+telephoneNumber: +68685311957
+telephoneNumber: +68685311577
+telephoneNumber: +68685311346
+manager: cn=Frances Thompson,ou=Research,ou=Consolidation
+
+dn: cn=Fiona Jones,ou=Statistical misinterpretation,ou=Finance,dc=Monopolistic Trading Company,dc=nodomain
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Fiona Jones
+sn: Jones
+mail: fiona5j5@monopolistictradingcompany.com.nz
+telephoneNumber: +6505679911
+telephoneNumber: +6505679509
+telephoneNumber: +6505679862
+manager: cn=Martin Clarke,ou=Statistical misinterpretation,ou=Finance
+
+dn: cn=Frances Wood,ou=Pest control,ou=Sub-divisions,dc=Neo-Imperial Exports,dc=nodomain
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Frances Wood
+sn: Wood
+mail: frances.wood@monopolisticusedvehicles.com.aq
+telephoneNumber: +672112928
+telephoneNumber: +672112293
+telephoneNumber: +672112101
+manager: cn=Magnus Wood,ou=Pest control,ou=Sub-divisions
+
+dn: cn=Frances Thomas,ou=market punctuation,dc=Monopolistic Used Vehicles,dc=nodomain
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Frances Thomas
+sn: Thomas
+mail: fthomas@unimaginableuniversity.com.ki
+telephoneNumber: +68685311325
+manager: cn=Micah Thompson,ou=Environmental protection,ou=market punctuation
+
+dn: cn=Matthew Walker,ou=Statistical misinterpretation,ou=Finance,dc=Monopolistic Trading Company,dc=nodomain
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Matthew Walker
+sn: Walker
+mail: mw32@unimaginableuniversity.com.ki
+telephoneNumber: +68685311090
+telephoneNumber: +68685311768
+manager: cn=Fifi Wright,ou=Finance
+
+dn: cn=Fran Green,ou=Consolidation,dc=Lanthanide Productions,dc=nodomain
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Fran Green
+sn: Green
+mail: fgreen@neoimperialexports.com.aq
+telephoneNumber: +672101020
+manager: cn=Magnus Harris,ou=Consolidation
+
+dn: cn=Fiona Smith,ou=Embezzelment,ou=Misappropriation,dc=Unimaginable University,dc=nodomain
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Fiona Smith
+sn: Smith
+mail: fiona.smith@monopolisticusedvehicles.com.aq
+telephoneNumber: +672112431
+telephoneNumber: +672112770
+telephoneNumber: +672112726
+manager: cn=Murray Robinson,ou=Embezzelment,ou=Misappropriation
+
+dn: cn=Matthew Wilson,ou=Environmental protection,ou=market punctuation,dc=Monopolistic Used Vehicles,dc=nodomain
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Matthew Wilson
+sn: Wilson
+mail: matthew.wilson@monopolisticusedvehicles.com.aq
+manager: cn=Martin Lee,ou=Environmental protection,ou=market punctuation
+
+dn: cn=Murray Johnson,ou=market punctuation,dc=Monopolistic Used Vehicles,dc=nodomain
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Murray Johnson
+sn: Johnson
+mail: murray6j7@lanthanideproductions.com.nz
+telephoneNumber: +6589895541
+telephoneNumber: +6589895039
+telephoneNumber: +6589895553
+manager: cn=Martin Lee,ou=Environmental protection,ou=market punctuation
+
+dn: cn=Flora Brown,ou=Environmental protection,ou=Research,ou=Consolidation,dc=Lanthanide Productions,dc=nodomain
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Flora Brown
+sn: Brown
+mail: flora5b5@monopolisticusedvehicles.com.aq
+telephoneNumber: +672112719
+telephoneNumber: +672112368
+telephoneNumber: +672112636
+telephoneNumber: +672112684
+manager: cn=Martin James,ou=Research,ou=Consolidation
+
+dn: cn=Murray Jones,ou=Manufacture,ou=Misappropriation,dc=Unimaginable University,dc=nodomain
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Murray Jones
+sn: Jones
+mail: mjones@neoimperialexports.com.aq
+telephoneNumber: +672101386
+telephoneNumber: +672101249
+telephoneNumber: +672101587
+manager: cn=Mark Martin,ou=Embezzelment,ou=Misappropriation
+
+dn: cn=Fran Walker,ou=Environmental protection,ou=market punctuation,dc=Monopolistic Used Vehicles,dc=nodomain
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Fran Walker
+sn: Walker
+mail: fwalker@unimaginableuniversity.com.ki
+telephoneNumber: +68685311965
+telephoneNumber: +68685311046
+telephoneNumber: +68685311009
+telephoneNumber: +68685311507
+manager: cn=Murray Johnson,ou=market punctuation
+
+dn: cn=Mario Lee,ou=Embezzelment,ou=Misappropriation,dc=Unimaginable University,dc=nodomain
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Mario Lee
+sn: Lee
+mail: mario5l3@unimaginableuniversity.com.ki
+telephoneNumber: +68685311535
+telephoneNumber: +68685311224
+telephoneNumber: +68685311114
+telephoneNumber: +68685311903
+manager: cn=Fiona Smith,ou=Embezzelment,ou=Misappropriation
+
+dn: cn=Fifi Watson,ou=Human resources,ou=Research,ou=Consolidation,dc=Lanthanide Productions,dc=nodomain
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Fifi Watson
+sn: Watson
+mail: fwatson@neoimperialexports.com.aq
+telephoneNumber: +672101913
+telephoneNumber: +672101790
+telephoneNumber: +672101517
+telephoneNumber: +672101514
+manager: cn=Martin James,ou=Research,ou=Consolidation
+
+dn: cn=Fiona Jackson,ou=Statistical misinterpretation,ou=Finance,dc=Monopolistic Trading Company,dc=nodomain
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Fiona Jackson
+sn: Jackson
+mail: fiona5j7@neoimperialexports.com.aq
+telephoneNumber: +672101916
+telephoneNumber: +672101891
+telephoneNumber: +672101415
+telephoneNumber: +672101277
+manager: cn=Micah Thomas,ou=Statistical misinterpretation,ou=Finance
+
+dn: cn=Fleur Lee,ou=Environmental protection,ou=market punctuation,dc=Monopolistic Used Vehicles,dc=nodomain
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Fleur Lee
+sn: Lee
+mail: fleur.lee@neoimperialexports.com.aq
+telephoneNumber: +672101544
+telephoneNumber: +672101468
+telephoneNumber: +672101214
+manager: cn=Mario Watson,ou=market punctuation
+
+dn: cn=Mario Johnson,ou=Environmental protection,ou=market punctuation,dc=Monopolistic Used Vehicles,dc=nodomain
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Mario Johnson
+sn: Johnson
+mail: mario5j7@neoimperialexports.com.aq
+telephoneNumber: +672101267
+telephoneNumber: +672101628
+telephoneNumber: +672101666
+manager: cn=Matthew Wilson,ou=Environmental protection,ou=market punctuation
+
+dn: cn=Fay Evans,ou=Consolidation,dc=Lanthanide Productions,dc=nodomain
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Fay Evans
+sn: Evans
+mail: fevans@monopolisticusedvehicles.com.aq
+manager: cn=Fifi Watson,ou=Human resources,ou=Research,ou=Consolidation
+
+dn: cn=Murray King,ou=Research,ou=Consolidation,dc=Lanthanide Productions,dc=nodomain
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Murray King
+sn: King
+mail: mking@lanthanideproductions.com.nz
+telephoneNumber: +6589895377
+manager: cn=Frances Williams,ou=Human resources,ou=Research,ou=Consolidation
+
+dn: cn=Matthew Smith,ou=Manufacture,ou=Misappropriation,dc=Unimaginable University,dc=nodomain
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Matthew Smith
+sn: Smith
+mail: msmith@monopolistictradingcompany.com.nz
+manager: cn=Mario Lee,ou=Embezzelment,ou=Misappropriation
