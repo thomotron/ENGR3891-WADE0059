@@ -1,0 +1,145 @@
+# Organisations
+dn: cn=Neo-Imperial Exports,dc=nodomain
+objectClass: organization
+organizationName: Neo-Imperial Exports
+c: AQ
+
+dn: cn=Lanthanide Productions,dc=nodomain
+objectClass: organization
+organizationName: Lanthanide Productions
+c: NZ
+
+dn: cn=Unimaginable University,dc=nodomain
+objectClass: organization
+organizationName: Unimaginable University
+c: KI
+
+dn: cn=Monopolistic Used Vehicles,dc=nodomain
+objectClass: organization
+organizationName: Monopolistic Used Vehicles
+c: AQ
+
+dn: cn=Monopolistic Trading Company,dc=nodomain
+objectClass: organization
+organizationName: Monopolistic Trading Company
+c: AU
+
+dn: cn=Neo-Imperial Exports,ou=Sub-divisions,dc=nodomain
+objectClass: organizationalUnit
+ou: Sub-divisions
+
+dn: cn=Neo-Imperial Exports,ou=Sub-divisions,ou=Pest control,dc=nodomain
+objectClass: organizationalUnit
+ou: Pest control
+
+dn: cn=Lanthanide Productions,ou=Consolidation,dc=nodomain
+objectClass: organizationalUnit
+ou: Consolidation
+
+dn: cn=Lanthanide Productions,ou=Consolidation,ou=Research,dc=nodomain
+objectClass: organizationalUnit
+ou: Research
+
+dn: cn=Lanthanide Productions,ou=Consolidation,ou=Research,ou=Human resources,dc=nodomain
+objectClass: organizationalUnit
+ou: Human resources
+
+dn: cn=Lanthanide Productions,ou=Consolidation,ou=Research,ou=Environmental protection,dc=nodomain
+objectClass: organizationalUnit
+ou: Environmental protection
+
+dn: cn=Unimaginable University,ou=Misappropriation,dc=nodomain
+objectClass: organizationalUnit
+ou: Misappropriation
+
+dn: cn=Unimaginable University,ou=Misappropriation,ou=Manufacture,dc=nodomain
+objectClass: organizationalUnit
+ou: Manufacture
+
+dn: cn=Unimaginable University,ou=Misappropriation,ou=Embezzelment,dc=nodomain
+objectClass: organizationalUnit
+ou: Embezzelment
+
+dn: cn=Monopolistic Used Vehicles,ou=market punctuation,dc=nodomain
+objectClass: organizationalUnit
+ou: market punctuation
+
+dn: cn=Monopolistic Used Vehicles,ou=market punctuation,ou=Environmental protection,dc=nodomain
+objectClass: organizationalUnit
+ou: Environmental protection
+
+dn: cn=Monopolistic Used Vehicles,ou=market punctuation,ou=Environmental protection,ou=Manufacture,dc=nodomain
+objectClass: organizationalUnit
+ou: Manufacture
+
+dn: cn=Monopolistic Trading Company,ou=Finance,dc=nodomain
+objectClass: organizationalUnit
+ou: Finance
+
+dn: cn=Monopolistic Trading Company,ou=Finance,ou=Statistical misinterpretation,dc=nodomain
+objectClass: organizationalUnit
+ou: Statistical misinterpretation
+
+dn: cn=Magnus Taylor,cn=Lanthanide Productions,ou=Environmental protection,dc=nodomain
+objectClass: organizationalPerson
+cn: Magnus Taylor
+gn: Magnus
+sn: Taylor
+mail: mtaylor@monopilistictradingcompany.com.nz
+telephoneNumber: 
+
+dn: cn=,cn=,ou=,dc=nodomain
+objectClass: organizationalPerson
+cn:
+gn:
+sn:
+mail:
+telephoneNumber:
+
+dn: cn=,cn=,ou=,dc=nodomain
+objectClass: organizationalPerson
+cn:
+gn:
+sn:
+mail:
+telephoneNumber:
+
+dn: cn=,cn=,ou=,dc=nodomain
+objectClass: organizationalPerson
+cn:
+gn:
+sn:
+mail:
+telephoneNumber:
+
+dn: cn=,cn=,ou=,dc=nodomain
+objectClass: organizationalPerson
+cn:
+gn:
+sn:
+mail:
+telephoneNumber:
+
+dn: cn=,cn=,ou=,dc=nodomain
+objectClass: organizationalPerson
+cn:
+gn:
+sn:
+mail:
+telephoneNumber:
+
+dn: cn=,cn=,ou=,dc=nodomain
+objectClass: organizationalPerson
+cn:
+gn:
+sn:
+mail:
+telephoneNumber:
+
+dn: cn=,cn=,ou=,dc=nodomain
+objectClass: organizationalPerson
+cn:
+gn:
+sn:
+mail:
+telephoneNumber:
