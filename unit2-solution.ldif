@@ -90,7 +90,7 @@ objectClass: organizationalPerson
 objectClass: inetOrgPerson
 cn: Magnus Taylor
 sn: Taylor
-mail: mtaylor@monopilistictradingcompany.com.nz
+mail: mtaylor@monopolistictradingcompany.com.nz
 
 dn: cn=Mario Lewis,ou=Human resources,ou=Research,ou=Consolidation,dc=Lanthanide Productions,dc=nodomain
 objectClass: organizationalPerson
