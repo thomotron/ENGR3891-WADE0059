@@ -2,27 +2,22 @@
 dn: cn=Neo-Imperial Exports,dc=nodomain
 objectClass: organization
 organizationName: Neo-Imperial Exports
-c: AQ
 
 dn: cn=Lanthanide Productions,dc=nodomain
 objectClass: organization
 organizationName: Lanthanide Productions
-c: NZ
 
 dn: cn=Unimaginable University,dc=nodomain
 objectClass: organization
 organizationName: Unimaginable University
-c: KI
 
 dn: cn=Monopolistic Used Vehicles,dc=nodomain
 objectClass: organization
 organizationName: Monopolistic Used Vehicles
-c: AQ
 
 dn: cn=Monopolistic Trading Company,dc=nodomain
 objectClass: organization
 organizationName: Monopolistic Trading Company
-c: AU
 
 dn: cn=Neo-Imperial Exports,ou=Sub-divisions,dc=nodomain
 objectClass: organizationalUnit
