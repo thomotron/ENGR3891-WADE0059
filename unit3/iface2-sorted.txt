@@ -8,12 +8,12 @@
 	hwaddress 17:EB:AB:29:9E:99
 	hwaddress 2B:B2:80:8E:6D:4B
 	hwaddress 59:B7:2A:02:92:3F
-iface ftdi1 inet
+iface ftdi1 inet dhcp
 iface jam2 inet static
-iface moths2 inet
-iface ruins0 inet
-iface ruins1 inet
-iface wlan0 inet inherits ruins1
+iface moths2 inet static
+iface ruins0 inet static
+iface ruins1 inet static
+iface wlan0 inet inherits ruins1 dhcp
 	mtu 2889
 	mtu 5069
 	mtu 5170

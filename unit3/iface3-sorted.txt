@@ -15,12 +15,12 @@
 	hwaddress 9B:AD:C8:3C:81:C8
 iface ftdi1 inet static inherits moths1
 iface ftdi3 inet static
-iface jam4 inet
+iface jam4 inet dhcp
 iface jam5 inet static
-iface moths1 inet
-iface ruins0 inet
-iface wlan0 inet
-iface wlan2 inet
+iface moths1 inet static
+iface ruins0 inet static
+iface wlan0 inet dhcp
+iface wlan2 inet dhcp
 iface wlan6 inet static inherits moths1
 	mtu 4558
 	mtu 6113
