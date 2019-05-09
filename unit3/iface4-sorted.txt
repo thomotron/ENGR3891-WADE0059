@@ -11,9 +11,9 @@
 	hwaddress 89:8A:F2:EA:94:A5
 	hwaddress D6:D9:D7:A1:C8:53
 iface castle3 inet static
-iface eth0 inet inherits castle3 dhcp
+iface eth0 inet dhcp inherits castle3
 iface eth1 inet static inherits ruins2
-iface eth2 inet inherits ruins1 dhcp
+iface eth2 inet dhcp inherits ruins1
 iface moths0 inet static
 iface ruins1 inet static
 iface ruins2 inet static
