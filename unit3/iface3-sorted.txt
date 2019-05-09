@@ -13,14 +13,14 @@
 	address 91.245.80.39/30
 	hwaddress 86:53:E2:8D:FD:0D
 	hwaddress 9B:AD:C8:3C:81:C8
-iface 115.205.115.145 inet static inherits moths1
-iface 18.99.83.208 inet static
-iface 6.242.75.43 inet static inherits moths1
-iface 91.245.80.39 inet static
+iface ftdi1 inet static inherits moths1
+iface ftdi3 inet static
 iface jam4 inet
+iface jam5 inet static
 iface moths1 inet
 iface ruins0 inet
 iface wlan0 inet
 iface wlan2 inet
+iface wlan6 inet static inherits moths1
 	mtu 4558
 	mtu 6113

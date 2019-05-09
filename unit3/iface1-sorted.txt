@@ -9,11 +9,11 @@
 	hwaddress 08:A6:B9:4D:33:DE
 	hwaddress 12:B2:ED:44:4F:C0
 	hwaddress BE:77:10:F5:B0:AB
-iface 29.218.73.235 inet static inherits wealth1
-iface 56.2.65.61 inet static inherits castle2
 iface castle0 inet
 iface castle2 inet
 iface eth2 inet inherits wealth1
+iface ftdi0 inet static inherits castle2
+iface ftdi1 inet static inherits wealth1
 iface wealth1 inet
 	mtu 6500
 	mtu 7010
