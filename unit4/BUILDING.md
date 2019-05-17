@@ -3,8 +3,8 @@
 need tweaking for other versions or distributions.*
 
 ## Automated installation
-Download and run the script from [here](https://gist.github.com/thomotron/...).  
-**NOTE:** You will need to manually install Vivado as per the [toolchain instructions](#install-build-toolchain). While the script will prompt you to do so, it may take a long time to download and install so it is recommended you do so early.
+Download and run the script from [here](https://gist.githubusercontent.com/thomotron/b15ac0f15175aec9bd1cc1127f73f726/raw/b4dccea422fbd28d0b06af41db81b0c5f8ce51ea/mega65-autobuild.sh).  
+**NOTE:** You will need to manually install Vivado as per the [toolchain instructions](#install-build-toolchain). While the script will prompt you to do so, it may take a long time to download and install so it is recommended you start early.
 
 ## Manual installation
 ### Pre-build
@@ -31,11 +31,12 @@ You will need to install the following native tool packages:
 
 Which can be done in one fell swoop with apt: `sudo apt install gcc g++ make python-minimal libpng-dev autoconf gperf flex bison gnat libreadline-dev`
 
-Additionally, the [Vivado Design Suite](https://www.xilinx.com/member/forms/download/xef-vivado.html?filename=Xilinx_Vivado_SDK_Web_2018.3_1207_2324_Lin64.bin) (specifically [WebPACK](https://www.xilinx.com/member/forms/download/xef-vivado.html?filename=Xilinx_Vivado_SDK_Web_2018.3_1207_2324_Lin64.bin)) is required, along with a valid license.  
-**NOTE:** The makefile will be expecting Vivado to be installed in `/opt/Xilinx/Vivado/`. If you have installed Vivado in a different location, create the `/opt/Xilinx/` directory with `sudo mkdir /opt/Xilinx/` and create a symbolic link to the install directory with `sudo ln -s <path_to_vivado> /opt/Xilinx/Vivado`.
+Additionally, the [Vivado Design Suite](https://www.xilinx.com/support/download.html) (specifically [WebPACK](https://www.xilinx.com/member/forms/download/xef-vivado.html?filename=Xilinx_Vivado_SDK_Web_2018.3_1207_2324_Lin64.bin)) is required, along with a valid license.  
+**NOTE:** The makefile will be expecting Vivado to be installed in `/opt/Xilinx/Vivado/`. If you have installed Vivado in a different location, create the `/opt/Xilinx/` directory with `sudo mkdir -p /opt/Xilinx/` and create a symbolic link to the install directory with `sudo ln -s <path_to_vivado> /opt/Xilinx/Vivado`.
 
 ### Build
-The following is a list of available make targets. You can make them by running `make <target_name>`.
+The following is a list of available make targets. You can make them by running `make <target_name>`.  
+**NOTE:** The `simulate` target will run indefinitely, so be careful when leaving it unattended.
 - `simulate`
 - `src/tools/monitor_load`
 - `src/tools/monitor_save`
