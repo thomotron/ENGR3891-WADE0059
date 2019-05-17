@@ -3,14 +3,14 @@
 # Exit immediately if something breaks
 set -e
 
-echo "Mega65 Auto-Build Script"
+echo "Mega65 Auto-Build Script, written by Thomas Wade"
 
-# Check if this is being run on Ubuntu
-if [ "$(lsb_release -ds)" != "Ubuntu" ]; then
-    echo "/// WARNING ///"
-    echo "You do not appear to be running Ubuntu, the distribution this script was designed for."
-    echo "It may behave unexpectedly or break without warning. Proceed at your own risk."
-fi
+# Check if this is being run on Ubuntu (disabled for now)
+#if [ "$(lsb_release -ds)" != "Ubuntu" ]; then
+#    echo "/// WARNING ///"
+#    echo "You do not appear to be running Ubuntu, the distribution this script was designed for."
+#    echo "It may behave unexpectedly or break without warning. Proceed at your own risk."
+#fi
 
 # Ask if the user wants to continue
 echo "This script will download the Mega65 Core project to '$(pwd)/mega65-core/' and install dependencies through apt."
@@ -22,6 +22,8 @@ fi                                                              #
 
 
 # Bulk-install dependencies so we can get right down to business later
+echo "Updating apt index..."
+sudo apt update
 echo "Installing dependencies with apt..."
 sudo apt install -y git gcc g++ make python-minimal libpng-dev autoconf gperf flex bison gnat libreadline-dev
 
@@ -76,4 +78,3 @@ then                                                # This block is taken from h
 fi                                                  #
 
 echo "Done building!"
-
