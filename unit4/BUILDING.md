@@ -3,7 +3,7 @@
 need tweaking for other versions or distributions.*
 
 ## Automated installation
-Download and run the script from [here](https://gist.githubusercontent.com/thomotron/b15ac0f15175aec9bd1cc1127f73f726/raw/b4dccea422fbd28d0b06af41db81b0c5f8ce51ea/mega65-autobuild.sh).  
+Download and run the script from [here](./mega65-autobuild.sh).  
 **NOTE:** You will need to manually install Vivado as per the [toolchain instructions](#install-build-toolchain). While the script will prompt you to do so, it may take a long time to download and install so it is recommended you start early.
 
 ## Manual installation
