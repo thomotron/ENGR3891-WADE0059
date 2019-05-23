@@ -1,25 +1,51 @@
-mkdir -m 775 unit1exercise1
+a=aufgeschmeckte
+b=aufgeschmecktete
+c=ausgekaestest
+d=ensetzse
+e=auftrautete
+f=gerauchse
+g=gerenner
+h=anlaufen
+i=gehalts
+j=behunder
+k=angerennte
+l=beschmecken
+m=gehundse
+n=einkatzeheit
+o=angewarfte
+p=angekraut
+q=aufwitzen
+r=aufgewarfen
+s=zerlaufen
+t=ansetzen
+mkdir unit1exercise1
 cd unit1exercise1
-mkdir -m 536 angeraucher
-mkdir -m 266 aussetzte
-mkdir -m 771 angetrautest
-mkdir -m 651 enschmeckse
-mkdir -m 154 zerfahrer
-mkdir -m 664 angekraust
-mkdir -m 344 angehunds
-mkdir -m 006 aufpflumheit
-mkdir -m 616 aussetzte/gehundte
-mkdir -m 305 angehunds/angesitzt
-mkdir -m 700 aufpflumheit/ausgekaesen
-mkdir -m 537 angekraust/geschmecken
-mkdir -m 502 angekraust/enkatzetete
-mkdir -m 363 angehunds/angesitzt/auspflums
-mkdir -m 644 angehunds/angesitzt/aussetzt
-mkdir -m 025 angehunds/angesitzt/angeschmecken
-mkdir -m 255 angehunds/angesitzt/aufgerennen
-mkdir -m 416 angehunds/angesitzt/getrauen
-mkdir -m 270 aufpflumheit/ausgekaesen/eingehen
-mkdir -m 145 angehunds/angesitzt/aufsetztete
-chown -R student:student ./
+O="sudo chown"
+M="sudo chmod"
+mkdir -p $g/$j/$t $b/$i/$s $g/$l/$r $f/$k/$q $g/$j/$p $f/$k/$o $b/$i/$n $f/$m $h $e $d $c $a
+$M 542 $g/$j/$t
+$M 453 $b/$i/$s
+$M 655 $g/$l/$r
+$M 653 $f/$k/$q
+$M 227 $g/$j/$p
+$M 541 $f/$k/$o
+$M 421 $b/$i/$n
+$M 21 $f/$m
+$M 446 $g/$l
+$M 625 $f/$k
+$M 135 $g/$j
+$M 322 $b/$i
+$M 434 $h
+$M 165 $g
+$M 461 $f
+$M 712 $e
+$M 61 $d
+$M 410 $c
+$M 522 $b
+$M 210 $a
+$O student:student $g/$j/$t $b/$i/$s $g/$l/$r $f/$k/$q $g/$j/$p $f/$k/$o $b/$i/$n $f/$m $g/$l $f/$k $g/$j $b/$i $h $g $f $e $d $c $b $a
 cd ..
-tar caf unit1-solution1.tgz unit1exercise1
+s=student; sudo chown ${s}:$s unit1exercise1
+sudo chmod 775 unit1exercise1
+sudo tar zcf unit1-solution1.tgz unit1exercise1
+sudo rm -fr unit1exercise1

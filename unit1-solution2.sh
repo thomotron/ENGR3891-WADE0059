@@ -1,15 +1,68 @@
-D=unit1exercise2
-mkdir $D
-cd $D
-p=(aufgegeht angetrittte angehaltung angesprachs gefahrte versetztete ausgesitztest angekatzetete angekatzetete/angehaltst angehaltung/angewitzkeit angekatzetete/besinns angehaltung/ausgewarfst gefahrte/ausfahrtete angehaltung/angewitzkeit/einfahren angekatzetete/angehaltst/verrauchst angehaltung/angewitzkeit/aufgesinnt angekatzetete/angehaltst/enwitzkeit gefahrte/ausfahrtete/ausgetrautest angekatzetete/besinns/angehunden angekatzetete/angehaltst/einrauchs)
-m=(351 756 363 110 653 471 134 051 153 621 044 630 057 675 032 116 641 572 400 623)
-o=(uucp proxy mail lp news mail student nobody news student nobody news nobody mail mail games games proxy lp mail)
-g=(dip tape uucp proxy voice uucp voice fax proxy voice student tape student news student dip mail news tape news)
-for i in {0..19}; do
-    install -d ${p[$i]} -m ${m[$i]} -o ${o[$i]} -g ${g[$i]}
-done
+a=angefahren
+b=auflaufst
+c=vertrittheit
+d=angerabarbst
+e=besinntest
+f=aufgesinner
+g=angetrause
+h=anrauchen
+i=betrittte
+j=getrittse
+k=aufgefahrtest
+l=auflaufkeit
+m=einlaufung
+n=besetzse
+o=angetrauer
+p=angesprachst
+q=enrauchtete
+r=verrennse
+s=aufgewarfung
+t=aufgeklettte
+mkdir unit1exercise2
+cd unit1exercise2
+O="sudo chown"
+M="sudo chmod"
+mkdir -p $h/$m/$t $f/$j/$s $h/$m/$r $h/$m/$q $h/$m/$p $f/$l/$o $h/$m/$n $a/$k $g/$i $e $d $c $b
+$M 264 $h/$m/$t
+$M 40 $f/$j/$s
+$M 226 $h/$m/$r
+$M 405 $h/$m/$q
+$M 367 $h/$m/$p
+$M 162 $f/$l/$o
+$M 667 $h/$m/$n
+$M 615 $h/$m
+$M 447 $f/$l
+$M 674 $a/$k
+$M 600 $f/$j
+$M 622 $g/$i
+$M 7 $h
+$M 207 $g
+$M 12 $f
+$M 673 $e
+$M 360 $d
+$M 737 $c
+$M 506 $b
+$M 743 $a
+$O student:dip $h/$m/$t
+$O proxy:audio $f/$j/$s
+$O student:student $h/$m/$r
+$O uucp:fax $h/$m/$q
+$O student:news $h/$m/$p
+$O student:uucp $f/$l/$o $g/$i
+$O proxy:news $h/$m/$n
+$O news:cdrom $h/$m
+$O news:news $f/$l $c
+$O games:voice $a/$k
+$O lp:tape $f/$j
+$O games:cdrom $h
+$O games:floppy $g
+$O proxy:floppy $f
+$O proxy:voice $e
+$O news:uucp $d
+$O uucp:mail $b
+$O proxy:dip $a
 cd ..
-S=student
-chown $S:$S $D
-chmod 775 $D
-tar caf unit1-solution2.tgz $D
+s=student; sudo chown ${s}:$s unit1exercise2
+sudo chmod 775 unit1exercise2
+sudo tar zcf unit1-solution2.tgz unit1exercise2
+sudo rm -fr unit1exercise2
