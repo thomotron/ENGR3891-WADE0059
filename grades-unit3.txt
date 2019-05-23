@@ -1,0 +1,42 @@
+10a11
+> 
+19,29c20,30
+< iface 122.202.132.207 inet static
+< iface 42.14.4.161 inet static inherits moths3
+< iface 71.21.253.116 inet static
+< iface 80.123.242.188 inet static inherits castle1
+< iface castle0 inet
+< iface castle1 inet
+< iface eth6 inet
+< iface jam4 inet
+< iface moths3 inet
+< iface wealth2 inet
+< iface wlan0 inet
+---
+> iface castle0 inet static
+> iface castle1 inet static
+> iface eth6 inet dhcp
+> iface ftdi1 inet static
+> iface jam2 inet static inherits moths3
+> iface jam4 inet dhcp
+> iface moths3 inet static
+> iface wealth2 inet static
+> iface wlan0 inet dhcp
+> iface wlan3 inet static inherits castle1
+> iface wlan5 inet static
+Incorrect answer for question 60 in 'unit3/answers.txt'
+Incorrect answer for question 63 in 'unit3/answers.txt'
+Incorrect answer for question 65 in 'unit3/answers.txt'
+Incorrect answer for question 70 in 'unit3/answers.txt'
+Incorrect answer for question 73 in 'unit3/answers.txt'
+Incorrect answer for question 76 in 'unit3/answers.txt'
+Incorrect answer for question 77 in 'unit3/answers.txt'
+Incorrect answer for question 79 in 'unit3/answers.txt'
+360/400 after HASH:unit3/answers.txt:unit3/check.txt
+diff unit3/iface0-solution.txt.sorted unit3/iface0-sorted.txt | wc -l > wc.log
+Diff output has 26 lines different:
+diff unit3/iface0-solution.txt.sorted unit3/iface0-sorted.txt
+Answer file 'unit3/iface0-solution.txt' has incorrect hash -- something is not exactly correct.
+376/500 after SORT:unit3/iface0-solution.txt:unit3/iface0-sorted.txt:unit3/iface0-hash.txt
+diff unit3/iface1-solution.txt.sorted unit3/iface1-sorted.txt | wc -l > wc.log
+NOTE: The figures above are based on the work submitted at this point in time.  It does not take into account any late penalties. Nor does is stop you from submitting an updated version. It is simply an automatically generated summary of the raw score that your current work has obtained.
