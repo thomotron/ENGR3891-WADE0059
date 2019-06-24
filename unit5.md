@@ -72,5 +72,5 @@ SSH-2.0-OpenSSH_7.6p1 Ubuntu-4ubuntu0.2
 Just for my own reference (and perhaps anyone reading out of curiosity), make sure to save your rules when you're done! `iptables` rules get flushed out every time it restarts.  
 You can save them with:
 ```bash
-sudo iptables save
+sudo iptables-save
 ```
