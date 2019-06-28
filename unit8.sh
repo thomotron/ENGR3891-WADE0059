@@ -348,7 +348,7 @@ while true; do
         [Ss])
             move_ship down # Move down
             ;;
-        [Dd])
+        [Dd]) # Using D for now since catching space didn't seem to work
             shoot # Let off a rock-crushing blast of energy
             ;;
     esac
