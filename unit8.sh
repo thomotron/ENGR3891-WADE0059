@@ -85,10 +85,10 @@ fi
 
 ##### BEGIN FUNCTIONS ##########################################################
 
-# Generates an asteroid and adds it to the queue
+# Generates an asteroid and adds it to the grid
 function generate_asteroid {
-    local radius=3  # TODO: Replace with random numbers in a reasonable range
-    local centre=10 #
+    local radius=$(shuf -i 1-5 -n 1) # Get a radius between 1 and 5
+    local centre=$(shuf -i 0-$height -n 1) # Get a random Y pos between 0 and $height
 
     # Make some boundary variables so I don't lose my mind trying to remember
     # what all of these calculations are
