@@ -64,13 +64,6 @@
 height=20
 width=100
 
-# Set the difficulty (i.e. chance an asteroid will spawn)
-# Read it as "One in X chance to spawn per tick"
-# 10 is fairly easy
-# 5 is somewhat difficult
-# 1 is a wall of rock
-asteroid_chance=7
-
 # Set some character types
 ship_head=">"
 ship_engine=":"
@@ -79,8 +72,32 @@ bullet="-"
 asteroid="#"
 space=" "
 
-# Define a ship position
-ship_y=10
+# Create the game grid
+# We'll be using an associative array as a hack for multi-dimensional arrays
+# See https://stackoverflow.com/a/16487733/5189708
+# Reading is quite simple: ${grid[x,y]}
+# Writing is similar but without the braces: grid[x,y]
+declare -A grid
+
+# My mind is melting, so we'll make bullets an overlay and compare later
+declare -A bullet_grid
+
+# Set up some variables for the main cannon
+# Gotta make it challenging somehow, right?
+magazine_size=15 # How many bullets we can hold in total
+bullets_left=$magazine_size # Bullets left in the magazine, start with 10
+ticks_per_bullet=8 # Ticks it will take to generate a new bullet
+bullet_regen_timer=$ticks_per_bullet # Ticks until the next bullet is generated
+
+# Set the difficulty (i.e. chance an asteroid will spawn)
+# Read it as "One in X chance to spawn per tick"
+# 10 is fairly easy
+# 5 is somewhat difficult
+# 1 is a wall of rock
+asteroid_chance=7
+
+# Set a flag that will break out of the main game loop
+crashed=false
 
 ##### BEGIN PRE-FLIGHT CHECKS ##################################################
 
@@ -374,17 +391,8 @@ function game_over {
     echo
 }
 
+
 ##### BEGIN MAIN LOGIC #########################################################
-
-# Create the game grid
-# We'll be using an associative array as a hack for multi-dimensional arrays
-# See https://stackoverflow.com/a/16487733/5189708
-# Reading is quite simple: ${grid[x,y]}
-# Writing is similar but without the braces: grid[x,y]
-declare -A grid
-
-# My mind is melting, so we'll make bullets an overlay and compare later
-declare -A bullet_grid
 
 # Initialise both grids to $space
 for ((y=0; y < height; y++)); do
@@ -394,15 +402,9 @@ for ((y=0; y < height; y++)); do
     done
 done
 
-# Set up some variables for the main cannon
-# Gotta make it challenging somehow, right?
-magazine_size=15 # How many bullets we can hold in total
-bullets_left=$magazine_size # Bullets left in the magazine, start with 10
-ticks_per_bullet=8 # Ticks it will take to generate a new bullet
-bullet_regen_timer=$ticks_per_bullet # Ticks until the next bullet is generated
+# Define a ship position
+ship_y=10
 
-# Set a flag that will break out of the main game loop
-crashed=false
 
 # Generate an asteroid
 generate_asteroid
