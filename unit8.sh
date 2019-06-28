@@ -2,9 +2,14 @@
 
 # GAMEPLAY:
 # Asteroids are hurtling toward your fine space ship!
-# Move up and down with W and S to avoid them
-# 
+# Move up and down with 'W' and 'S' to avoid them
+# Oh! You've also recently installed a plasma cannon you can fire with 'D'
+#
 # That's all folks, the rest is all dev notes
+
+
+
+
 
 # We're going to try make a galaga-esque thing
 # Side-scrolling, asteroid shooting game
@@ -82,53 +87,97 @@ fi
 
 # Generates an asteroid and adds it to the queue
 function generate_asteroid {
-    local diameter=$()
+    local radius=3  # TODO: Replace with random numbers in a reasonable range
+    local centre=10 #
+
+    # Make some boundary variables so I don't lose my mind trying to remember
+    # what all of these calculations are
+    local left=$((width-centre-radius))
+    local right=$width
+    local top=$((centre-radius))
+    local bottom=$((centre+radius))
+
+    # Clamp top and bottom
+    if [ $top -lt 0 ]; then top=0; fi
+    if [ $bottom -gt $((height-1)) ]; then bottom=$((height-1)); fi
+
+    for ((y = top; y <= bottom; y++)); do
+        for ((x = left; x < right; x++)); do
+            grid[$x,$y]=$asteroid
+        done
+    done
 }
 
-# Scrolls the scene left by one, applying cell state changes as needed
-function sidescroll {
-    # Iterate over the grid
-    for ((y=0; y < height; y++)); do
-        for ((x = width - 1; x >= 0; x--)); do
-            # Get an alias for the current cell
-            local cell=${grid[$x,$y]}
-
-            # Check if we are on the last column
-            if [ $x -eq $width ]; then
-                # Can we pull from the queue?
-                # TODO: queue-pulling stuff
-                yee=eet
-            else
-                # Get the cell on our right before we do anything
-                local rcell=${grid[$((x+1)),$y]}
-
-                # Check the next cell type
-                if [ "$rcell" == "$asteroid" ]; then # If it's an asteroid...
-                    # Depending on our current cell, decide what to do
-                    case $cell in
-                        $ship_head)
-                            # About to crash
-                            ship_crash
-                            ;;
-                        $bullet)
-                            # Destroy the asteroid
-                            ${grid[$x,$y]}=$space
-                            ;;
-                        $space)
-                            # Move the asteroid over
-                            ${grid[$x,$y]}=$asteroid
-                            ;;
-                    esac
-                elif [ "$rcell" == "$space" ]; then # Otherwise, if it's space...
-                    # Make sure we aren't a ship part first
-                    if [ ! "$cell" == "$ship_head" ]; then
-                        # Set the current cell to space
-                        grid[$x,$y]=$space
-                    fi
-                fi
+# Checks for any collisions between the bullet and game grid and applies changes
+function apply_bullets {
+    for ((y = 0; y < height; y++)); do
+        for ((x = 0; x < width; x++)); do
+            # Check if there are overlapping bullets and asteroids
+            if [ "${bullet_grid[$x,$y]}" == "$bullet" ] && [ "${grid[$x,$y]}" == "$asteroid" ]; then
+                # Delete both the bullet and asteroid
+                grid[$x,$y]=$space
+                bullet_grid[$x,$y]=$space
             fi
         done
     done
+}
+
+# Scrolls the scene left by one, applying cell state changes as needed
+# This only modifies the grid, drawing is handled by another function
+function sidescroll {
+    # Move all the bullets right one
+    for ((y = 0; y < height; y++)); do
+        for ((x = width; x >= 0; x--)); do
+            # Aliases for sanity
+            local current=$x,$y
+            local prev=$((x+1)),$y
+
+            # Copy this bullet to the right
+            bullet_grid[$prev]=${bullet_grid[$current]}
+
+            # Clear this cell
+            bullet_grid[$current]=$space
+        done
+    done
+
+    # Delete any overlapping bullets and asteroids
+    apply_bullets
+
+    # Move everything else left one
+    for ((y = 0; y < height; y++)); do
+        local clear_next=""
+        for ((x = 0; x < width; x++)); do
+            # Aliases for sanity
+            local current=$x,$y
+            local prev=$((x-1)),$y
+
+            # Check if this is a ship part
+            if [ "${grid[$current]}" == "$ship_head" ] \
+            || [ "${grid[$current]}" == "$ship_engine" ] \
+            || [ "${grid[$current]}" == "$ship_exhaust" ]; then
+                # Clear the next cell instead of shifting it
+                clear_next="yep, get rid of it"
+            else
+                if [ "$clear_next" ]; then
+                    # Clear this cell
+                    grid[$current]=$space
+
+                    # Reset the flag
+                    clear_next=""
+                else
+                    # Copy this cell to the left
+                    grid[$prev]=${grid[$current]}
+
+                    # Clear this cell
+                    grid[$current]=$space
+                fi
+            fi
+
+        done
+    done
+
+    # Delete any overlapping bullets and asteroids
+    apply_bullets
 }
 
 # Adds the ship to the grid
@@ -154,11 +203,6 @@ function move_ship {
 
         # Decrement ship Y
         ship_y=$(($ship_y - 1))
-
-        # Add the ship in the desired direction
-        grid[0,$ship_y]=$ship_exhaust
-        grid[1,$ship_y]=$ship_engine
-        grid[2,$ship_y]=$ship_head
     elif [ "$direction" == "down" ] && [ $(can_move "$direction") == "y" ]; then # Moving down...
         # Clear the ship from the current position
         grid[0,$ship_y]=$space
@@ -167,12 +211,17 @@ function move_ship {
 
         # Increment ship Y
         ship_y=$(($ship_y + 1))
-
-        # Add the ship in the desired direction
-        grid[0,$ship_y]=$ship_exhaust
-        grid[1,$ship_y]=$ship_engine
-        grid[2,$ship_y]=$ship_head
     fi
+
+    # Add the ship in the new position
+    grid[0,$ship_y]=$ship_exhaust
+    grid[1,$ship_y]=$ship_engine
+    grid[2,$ship_y]=$ship_head
+}
+
+# Fires a bullet from the front of the ship
+function shoot {
+    bullet_grid[3,$ship_y]=$bullet
 }
 
 # Checks if the ship can move in a direction
@@ -237,14 +286,18 @@ function draw_grid {
     for ((y=0; y < height; y++)); do
         for ((x=0; x < width; x++)); do
             # Write the character without a newline
-            output="$output${grid[$x,$y]}"
+            if [ ${bullet_grid[$x,$y]} ]; then
+                output="$output${bullet_grid[$x,$y]}"
+            else
+                output="$output${grid[$x,$y]}"
+            fi
         done
         # Write a newline before we start the next row
         output="$output\n"
     done
 
     # Print out the grid
-    echo -e "$output"
+    echo -ne "$output"
 }
 
 ##### BEGIN MAIN LOGIC #########################################################
@@ -252,15 +305,23 @@ function draw_grid {
 # Create the game grid
 # We'll be using an associative array as a hack for multi-dimensional arrays
 # See https://stackoverflow.com/a/16487733/5189708
-# Accessing is as simple as ${grid[x,y]}
+# Reading is quite simple: ${grid[x,y]}
+# Writing is similar but without the braces: grid[x,y]
 declare -A grid
 
-# Initialise the grid to $space
+# My mind is melting, so we'll make bullets an overlay and compare later
+declare -A bullet_grid
+
+# Initialise both grids to $space
 for ((y=0; y < height; y++)); do
     for ((x=0; x < width; x++)); do
         grid[$x,$y]=$space
+        bullet_grid[$x,$y]=$space
     done
 done
+
+# Generate an asteroid
+generate_asteroid
 
 # Clear the terminal
 clear
@@ -271,35 +332,30 @@ add_ship
 
 # Main game loop
 while true; do
-    # Run on a 4-tick cycle
-    # The ship can move each tick
-    # The map will progress each cycle
-    # This is for ship input to feel more responsive
-    for ((i=0; i < 10; i++)); do
-        # Wait for a moment
-        sleep 0.05
+    local tick=$((tick+1))
 
-        # Read in any key presses
-        read -rs -n 1 -t 0.001 key
+    # Wait for a moment
+    sleep 0.01
 
-        # Move the ship if there was a key pressed
-        case $key in
-            [Ww])
+    # Read in any key presses
+    read -rs -n 1 -t 0.001 key
+
+    # Move the ship if there was a key pressed
+    case $key in
+        [Ww])
             move_ship up # Move up
             ;;
-            [Ss])
+        [Ss])
             move_ship down # Move down
             ;;
-        esac
+        [Dd])
+            shoot # Let off a rock-crushing blast of energy
+            ;;
+    esac
 
-        # Check if this is the first tick of the cycle
-        if [ $i -eq 0 ]; then
-            # Progress the map
-            sidescroll
-        fi
+    sidescroll
 
-        # Draw the grid
-        draw_grid
-    done
+    # Draw the grid
+    draw_grid
 
 done
