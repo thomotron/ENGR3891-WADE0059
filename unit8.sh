@@ -345,7 +345,16 @@ function draw_grid {
 
 # Displays a game over message in the centre of the game area
 function game_over {
-    # Calculate where to place the message
+    # Change the ship to make it look destroyed
+    ship_head="*" # Explosion
+    ship_engine="~" # Exhaust trail
+    ship_exhaust="" # Void
+
+    # Draw the destroyed ship
+    add_ship
+    draw_grid
+
+    # Calculate where to place the game over message
     local top=$((height/2-1)) # Top row
     local middle=$((height/2)) # Middle row
     local bottom=$((height/2+1)) # Bottom row
