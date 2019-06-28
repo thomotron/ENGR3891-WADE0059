@@ -180,7 +180,7 @@ function sidescroll {
                         crashed=true
 
                         # Break out of the function
-                        return 1
+                        #return 1
                     else
                         # Clear this cell
                         grid[$current]=$space
