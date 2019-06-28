@@ -87,13 +87,18 @@ fi
 
 # Generates an asteroid and adds it to the grid
 function generate_asteroid {
+    #local horz_radius=$(shuf -i 1-5 -n 1) # Get a radius between 1 and 5
+    #local vert_radius=$((horz_radius*100/6*5/100)) # Get a vertical radius 5/6ths of the horizontal
     local radius=$(shuf -i 1-5 -n 1) # Get a radius between 1 and 5
     local centre=$(shuf -i 0-$height -n 1) # Get a random Y pos between 0 and $height
 
     # Make some boundary variables so I don't lose my mind trying to remember
     # what all of these calculations are
+    #local left=$((width-centre-horz_radius))
     local left=$((width-centre-radius))
-    local right=$width
+    local right=$((width-1))
+    #local top=$((centre-vert_radius))
+    #local bottom=$((centre+vert_radius))
     local top=$((centre-radius))
     local bottom=$((centre+radius))
 
@@ -102,7 +107,7 @@ function generate_asteroid {
     if [ $bottom -gt $((height-1)) ]; then bottom=$((height-1)); fi
 
     for ((y = top; y <= bottom; y++)); do
-        for ((x = left; x < right; x++)); do
+        for ((x = left; x <= right; x++)); do
             grid[$x,$y]=$asteroid
         done
     done
@@ -195,7 +200,7 @@ function move_ship {
     local direction=${1,,}
 
     # Check the direction the ship will move
-    if [ "$direction" == "up" ] && [ $(can_move "$direction") == "y" ]; then # Moving up...
+    if [ "$direction" == "up" ] && [ "$(can_move "$direction")" == "y" ]; then # Moving up...
         # Clear the ship from the current position
         grid[0,$ship_y]=$space
         grid[1,$ship_y]=$space
@@ -203,7 +208,7 @@ function move_ship {
 
         # Decrement ship Y
         ship_y=$(($ship_y - 1))
-    elif [ "$direction" == "down" ] && [ $(can_move "$direction") == "y" ]; then # Moving down...
+    elif [ "$direction" == "down" ] && [ "$(can_move "$direction")" == "y" ]; then # Moving down...
         # Clear the ship from the current position
         grid[0,$ship_y]=$space
         grid[1,$ship_y]=$space
@@ -332,8 +337,6 @@ add_ship
 
 # Main game loop
 while true; do
-    local tick=$((tick+1))
-
     # Wait for a moment
     sleep 0.01
 
@@ -357,5 +360,4 @@ while true; do
 
     # Draw the grid
     draw_grid
-
 done
