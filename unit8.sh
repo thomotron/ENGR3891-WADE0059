@@ -391,6 +391,31 @@ function game_over {
     echo
 }
 
+# Displays the controls and how to play
+function show_instructions {
+    # Clear the terminal
+    clear
+
+    # Print out a massive block of text
+    echo ""
+    echo "You wake up to rigorous shaking and warning alarms sounding off. Struggling to pull yourself out of the water-laden container, you stumble to your feet. It wasn't time for re-entry just yet, you'd only been in cryostasis for a few days! Opening the door to the cockpit you see asteroids everywhere. Millions of rocks floating as far as the eye could see... and you are heading straight for them! You throw yourself into the pilot's seat, flick on the plasma cannon pre-charger, and grip the controls. This might get messy..."
+    echo ""
+    echo "CONTROLS:"
+    echo "W/S - Move ship up and down"
+    echo "D - Fire cannon"
+    echo ""
+    echo "HOW TO PLAY:"
+    echo "Avoid the constant battery of asteroids for as long as you can!"
+    echo "Steer clear of them or shoot the plasma cannon to try bore through them."
+    echo "Be careful though, the cannon has a limited magazine size and takes time to generate more rounds."
+    echo ""
+    echo "Press any key to start"
+
+    echo -e $message
+
+    # Wait for any key
+    read
+}
 
 ##### BEGIN MAIN LOGIC #########################################################
 
@@ -405,6 +430,8 @@ done
 # Define a ship position
 ship_y=10
 
+# Pause and show the instructions on how to play
+show_instructions
 
 # Generate an asteroid
 generate_asteroid
