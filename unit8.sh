@@ -113,8 +113,10 @@ function generate_asteroid {
     if [ $top -lt 0 ]; then top=0; fi
     if [ $bottom -gt $((height-1)) ]; then bottom=$((height-1)); fi
 
+    # Draw the asteroid
     for ((y = top; y <= bottom; y++)); do
         for ((x = left; x <= right; x++)); do
+            # TODO: Make circles
             grid[$x,$y]=$asteroid
         done
     done
@@ -170,6 +172,7 @@ function sidescroll {
                 # Clear the next cell instead of shifting it
                 clear_next="yep, get rid of it"
             else
+                # Check if we should clear the cell
                 if [ "$clear_next" ]; then
                     # Clear this cell
                     grid[$current]=$space
