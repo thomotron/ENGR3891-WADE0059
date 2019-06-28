@@ -64,6 +64,13 @@
 height=20
 width=100
 
+# Set the difficulty (i.e. chance an asteroid will spawn)
+# Read it as "One in X chance to spawn per tick"
+# 10 is fairly easy
+# 5 is somewhat difficult
+# 1 is a wall of rock
+asteroid_chance=7
+
 # Set some character types
 ship_head=">"
 ship_engine=":"
@@ -301,6 +308,25 @@ function draw_grid {
         output="$output\n"
     done
 
+    # Should we use plural 'shots' or 'shot'?
+    if [ $bullets_left -eq 1 ]; then
+        local rounds_plural="shot"
+    else
+        local rounds_plural="shots"
+    fi
+
+    # Print out how many bullets are left
+    echo -n "You have $bullets_left/$magazine_size $rounds_plural left "
+
+    # Check if the magazine is full
+    if [ $bullets_left -eq $magazine_size ]; then
+        # Say that the mag is full
+        echo "(+0 (magazine full))"
+    else
+        # Print out how often a new bullet will generate
+        echo "(+1 per $ticks_per_bullet ticks)"
+    fi
+
     # Print out the grid
     echo -ne "$output"
 }
@@ -324,6 +350,13 @@ for ((y=0; y < height; y++)); do
         bullet_grid[$x,$y]=$space
     done
 done
+
+# Set up some variables for the main cannon
+# Gotta make it challenging somehow, right?
+magazine_size=15 # How many bullets we can hold in total
+bullets_left=$magazine_size # Bullets left in the magazine, start with 10
+ticks_per_bullet=8 # Ticks it will take to generate a new bullet
+bullet_regen_timer=$ticks_per_bullet # Ticks until the next bullet is generated
 
 # Generate an asteroid
 generate_asteroid
@@ -352,10 +385,40 @@ while true; do
             move_ship down # Move down
             ;;
         [Dd]) # Using D for now since catching space didn't seem to work
-            shoot # Let off a rock-crushing blast of energy
+            # Check if we have any bullets left
+            if [ "$bullets_left" -gt 0 ]; then
+                # Let off a rock-crushing blast of energy
+                shoot
+
+                # Remove a bullet from the magazine
+                bullets_left=$((bullets_left-1))
+            fi # Otherwise do nothing
             ;;
     esac
 
+    # Check if a new bullet can be generated
+    if [ $bullet_regen_timer -eq 0 ]; then
+        # Check if the magazine has room for a new bullet
+        if [ $bullets_left -lt $magazine_size ]; then
+            # Generate a new bullet in the magazine
+            bullets_left=$((bullets_left+1))
+
+            # Reset the timer
+            bullet_regen_timer=$ticks_per_bullet
+        fi # Otherwise do nothing, leave the bullet that just got generated in
+           # the generator, ready to get loaded in the mag when there is space
+    else
+        # Decrement the timer
+        bullet_regen_timer=$((bullet_regen_timer-1))
+    fi
+
+    # At a one in $asteroid_chance chance...
+    if [ $((RANDOM % asteroid_chance)) -eq 0 ]; then
+        # Make an asteroid
+        generate_asteroid
+    fi
+
+    # Progress the grids by one
     sidescroll
 
     # Draw the grid
