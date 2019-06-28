@@ -159,7 +159,7 @@ function sidescroll {
 
     # Move everything else left one
     for ((y = 0; y < height; y++)); do
-        local clear_next=""
+        local in_front_of_ship=""
         for ((x = 0; x < width; x++)); do
             # Aliases for sanity
             local current=$x,$y
@@ -170,15 +170,24 @@ function sidescroll {
             || [ "${grid[$current]}" == "$ship_engine" ] \
             || [ "${grid[$current]}" == "$ship_exhaust" ]; then
                 # Clear the next cell instead of shifting it
-                clear_next="yep, get rid of it"
+                in_front_of_ship="yep"
             else
-                # Check if we should clear the cell
-                if [ "$clear_next" ]; then
-                    # Clear this cell
-                    grid[$current]=$space
+                # Check if we are in front of the ship
+                if [ "$in_front_of_ship" ]; then
+                    # Check if there is going to be a collision
+                    if [ "${grid[$current]}" == "$asteroid" ]; then
+                        # Game over, dude
+                        crashed=true
 
-                    # Reset the flag
-                    clear_next=""
+                        # Break out of the function
+                        return 1
+                    else
+                        # Clear this cell
+                        grid[$current]=$space
+
+                        # Reset the flag
+                        in_front_of_ship=""
+                    fi
                 else
                     # Copy this cell to the left
                     grid[$prev]=${grid[$current]}
@@ -334,6 +343,27 @@ function draw_grid {
     echo -ne "$output"
 }
 
+# Displays a game over message in the centre of the game area
+function game_over {
+    # Calculate where to place the message
+    local top=$((height/2-1)) # Top row
+    local middle=$((height/2)) # Middle row
+    local bottom=$((height/2+1)) # Bottom row
+    local left=$((width/2-6)) # Left edge
+
+    # Print out the game over message with some blank padding around it
+    tput cup $top $left
+    echo -n "             "
+    tput cup $middle $left
+    echo -n "  GAME OVER  "
+    tput cup $bottom $left
+    echo -n "             "
+
+    # Set the cursor position to the bottom-right and print a newline
+    tput cup $width $height
+    echo
+}
+
 ##### BEGIN MAIN LOGIC #########################################################
 
 # Create the game grid
@@ -361,6 +391,9 @@ bullets_left=$magazine_size # Bullets left in the magazine, start with 10
 ticks_per_bullet=8 # Ticks it will take to generate a new bullet
 bullet_regen_timer=$ticks_per_bullet # Ticks until the next bullet is generated
 
+# Set a flag that will break out of the main game loop
+crashed=false
+
 # Generate an asteroid
 generate_asteroid
 
@@ -372,7 +405,7 @@ clear
 add_ship
 
 # Main game loop
-while true; do
+while ! $crashed; do
     # Wait for a moment
     sleep 0.01
 
@@ -427,3 +460,5 @@ while true; do
     # Draw the grid
     draw_grid
 done
+
+game_over
