@@ -365,7 +365,7 @@ function game_over {
     # Change the ship to make it look destroyed
     ship_head="*" # Explosion
     ship_engine="~" # Exhaust trail
-    ship_exhaust="" # Void
+    ship_exhaust=" " # Void
 
     # Draw the destroyed ship
     add_ship
