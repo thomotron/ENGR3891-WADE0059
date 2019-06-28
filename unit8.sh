@@ -70,7 +70,7 @@ ship_engine=":"
 ship_exhaust="="
 bullet="-"
 asteroid="#"
-space=" " # haha, get it?
+space=" "
 
 # Define a ship position
 ship_y=10
