@@ -333,10 +333,10 @@ function draw_grid {
     # Check if the magazine is full
     if [ $bullets_left -eq $magazine_size ]; then
         # Say that the mag is full
-        echo "(+0 (magazine full))"
+        echo "(+0 (magazine full))     " # Spaces are a dirty fix to overwrite old brackets
     else
         # Print out how often a new bullet will generate
-        echo "(+1 per $ticks_per_bullet ticks)"
+        echo "(+1 per $ticks_per_bullet ticks)     "
     fi
 
     # Print out the grid
