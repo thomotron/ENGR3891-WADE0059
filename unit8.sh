@@ -368,7 +368,8 @@ function game_over {
     tput cup $bottom $left
     echo -n "             "
 
-    # Set the cursor position to the bottom-right and print a newline
+    # Set the cursor position to the bottom-right and print a newline to reset
+    # for the terminal prompt
     tput cup $width $height
     echo
 }
