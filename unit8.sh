@@ -273,8 +273,8 @@ function can_move {
     # Get the cells we're checking as a string for easy comparison
     local target_cells=${grid[0,$((ship_y + y_offset))]}${grid[1,$((ship_y + y_offset))]}${grid[2,$((ship_y + y_offset))]}
 
-    # Check if the space contains asteroid
-    if [ "$target_cells" == *"$asteroid"* ]; then
+    # Check if the space contains $asteroid
+    if [[ "$target_cells" =~ [$asteroid]+ ]]; then
         # Return that the ship cannot move
         echo "n"
         return 1
